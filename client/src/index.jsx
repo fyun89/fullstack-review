@@ -12,6 +12,18 @@ class App extends React.Component {
     }
 
   }
+  
+  componentDidMount () {
+      // $.ajax({
+      //   url: 'url',
+      //   data: data,
+      //   success: 'success',
+      //   dataType: 'string'
+      // }).then(console.log(data))
+      $.get('http://localhost:1128/repo', function(data, status){
+        console.log('jquery test data: ', data)
+      })
+  }
 
   search (term) {
     console.log(`${term} was searched`);
