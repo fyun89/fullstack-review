@@ -38,5 +38,5 @@ let find = (cb) => {
 
 
 //save('felix', 'abc', '2016-05-18T16:00:00Z')
-module.exports.find = find
+module.exports.find = find;
 module.exports.save = save;

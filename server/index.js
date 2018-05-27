@@ -41,20 +41,29 @@ app.post('/repos', function (req, res) {
   res.status(200).end()
 });
 
-app.get('/', function (req, res) {
+app.get('/repos', function (req, res) {
   // TODO - your code here!
   // This route should send back the top 25 repos
   //console.log(find())
   console.log('get is working')
-  res.send(find.find(function(data,err){
-    if(err){
-      console.error(err)
-    }else{
-      console.log('--this is the data from ressend-->', data)
-      return data
-    }
-  }))
-  res.end(data)
+
+  find.find(function(data, err){
+    res.send(data)
+  })
+
+
+  // res.send(find.find(function(data, err){
+  //   if(err){
+  //     console.error(err);
+  //     res.end();
+  //   }
+  //   console.log('--this is the data from ressend-->', data);
+  //   return JSON.stringify(data)
+  //   data
+  // }))
+  // res.end()
+  
+  //res.end(data)
   // res.end(find.find(function(data, err){
   //   if (err){
   //     console.error(err)
